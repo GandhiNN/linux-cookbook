@@ -47,3 +47,9 @@ nameserver 8.8.4.4
 ```
 sudo chattr +i /etc/resolv.conf
 ```
+
+5. Quick hack: cleaning up Rust folders
+```
+# Run this in the "parent" Rust folders
+for i in `ls`; do cd $i; cargo clean; pwd; cd ..; pwd; done
+```
